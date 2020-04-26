@@ -13,7 +13,6 @@ header .upper-panel {
      grid-template-columns: repeat(2,1fr);
  }
 header .upper-panel .phone figcaption{
-    position: absolute;
     top: 15px;
     left: 380px;
 }
