@@ -12,18 +12,21 @@
     <script defer type="text/javascript" src="slick/slick.js"></script>
     <script defer type="text/javascript" src="js/buttonDown.js"></script>
     <script defer type="text/javascript" src="js/slider.js"></script>
-
+    <script defer type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
     <header>
+        <div class="accordion">
+            <img src="svg/menu.png" alt="menu" id="accordionMenu">
+        </div>
         <div class="upper-panel">
             <figure class="phone">
-                <img src="svg/phone.png">
+                <img src="svg/phone.png" alt="phone">
                 <figcaption>
                         <a href="#">Call <span> +001 555 801</span></a>
                 </figcaption>
             </figure>
-            <ul>
+            <ul class="menu">
                 <li><a href="#">WELCOME MSG!</a> </li>
                 <li><a href="#">MY ACCOUNT</a></li>
                 <li><a href="#">MY WHISHLIST</a></li>
@@ -37,32 +40,45 @@
                 <li>Category</li>
                 <li>Pages</li>
             </ul>
-            <img src="svg/Shophia.png">
+            <div class="shopia">
+                <img src="svg/Shophia.png">
+            </div>
             <div class="social-bar">
                 <figure>
-                    <div class="circle"></div>
-                    <span style="font-size: 1.5em;color: black;">
-                        <i class="fab fa-facebook-f"></i>
-                    </span>
+                    <div class="circle">
+                        <span style="font-size: 1.5em;color: black;">
+                            <i class="fab fa-facebook-f"></i>
+                        </span>
+                    </div>
                 </figure>
                 <figure>
-                    <div class="circle"></div>
-                    <span style="font-size: 1.5em;color: black;">
-                        <i class="fab fa-twitter"></i>
-                    </span>
+                    <div class="circle">
+                        <span style="font-size: 1.5em;color: black;">
+                            <i class="fab fa-twitter"></i>
+                        </span>
+                    </div>
                 </figure>
                 <figure>
-                    <div class="circle"></div>
-                    <span style="font-size: 1.4em;color: black;">
-                        <i class="fab fa-pinterest"></i>
-                    </span>
+                    <div class="circle">
+                        <span style="font-size: 1.4em;color: black;">
+                            <i class="fab fa-pinterest"></i>
+                        </span>
+                    </div>
                 </figure>
                 <figure>
-                    <div class="circle"></div>
-                    <span style="font-size: 1.5em;color: black;">
-                        <i class="fab fa-instagram"></i>
-                    </span>
+                    <div class="circle">
+                        <span style="font-size: 1.5em;color: black;">
+                            <i class="fab fa-instagram"></i>
+                        </span>
+                    </div>
                 </figure>
+            </div>
+            <div class="currency">
+                <button class="euro">EURO</button>
+                <ul style="display:none">
+                    <li>USD</li>
+                    <li>BTC</li>
+                </ul>
             </div>
         </div>
     </header>
@@ -85,9 +101,12 @@
                 </div>
             </div>
             <div class="slider">
-                <div><img src="svg/two-girls.png"></div>
-                <div><img src="svg/necklace.jpg"></div>
-                <div><img src="svg/two-girls.png"></div>
+                <div><img src="svg/two-girls_4.jpg"></div>
+                <div>
+                    <img src="svg/necklace.jpg">
+                </div>
+                <div><img src="svg/leder_sign.svg#sign" height="400px" style="display: grid;align-items: center;"></div>
+                <div><img src="svg/two-girls_4.jpg"></div>
             </div>
           <!--  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1440 692" style="enable-background:new 0 0 1440 692;" xml:space="preserve" width="1440px" height="692px">
@@ -103,12 +122,13 @@
                     </span>
                     <div class="plane-description">
                         <h2>FREE SHIPPING</h2>
-                        <br>In order min $200
+                        <span>In order min $200</span>
                     </div>
                 </div>
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="431px" height="100px" viewBox="0 0 431 100">
                     <use xlink:href="svg/arrow-gold.svg#arrow-gold"></use>
                 </svg>
+                <!--<img src="svg/arrow-gold.svg#arrow-gold">-->
             </div>
             <div class="returns">
                 <div class="clock">
@@ -117,9 +137,10 @@
                     </span>
                     <div class="clock-description">
                         <h2>30-DAYS RETURNS</h2>
-                        <br>Money Back Guarantee
+                        <span>Money Back Guarantee</span>
                     </div>
                 </div>
+                <!--<img src="svg/arrow-black.svg">-->
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="456px" height="100px" viewBox="0 0 456 100">
                     <use xlink:href="svg/arrow-black.svg#arrow-black"></use>
                 </svg>
@@ -131,9 +152,10 @@
                     </span>
                     <div class="rudder-description">
                         <h2>24/7 SUPPORT</h2>
-                        <br>Lifestime Support
+                        <span>Lifestime Support</span>
                     </div>
                 </div>
+                <!--<img src="svg/arrow-left.svg#arrow-left">-->
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="432" height="100" viewBox="0 0 432 100">
                     <use xlink:href="svg/arrow-left.svg#arrow-left"></use>
                 </svg>
@@ -149,7 +171,7 @@
                         <use xlink:href="svg/rhombus.svg#romb"></use>
                     </svg>
                     <h2>Handpicked</h2>
-                    <svg class="romb1" fill=" #d9bf8f" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    <svg class="romb2" fill=" #d9bf8f" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                          width="20" height="20" viewBox="0 0 20 20">
                         <use xlink:href="svg/rhombus.svg#romb"></use>
                     </svg>
@@ -166,10 +188,11 @@
                             </div>
                         </div>
                         <div class="buy-rectangle">SHOP NOW</div>
-                        <svg class="romb1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        <img src="svg/shoes_back.svg#shoes_back">
+                        <!--<svg class="romb1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                              viewBox="0 0 400 400" height="400px" width="400px">
                             <use xlink:href="svg/shoes_back.svg#shoes_back"></use>
-                        </svg>
+                        </svg>-->
                     </div>
                     <div class="braslet">
                         <div class="rectangle-braslet"> </div>
@@ -187,10 +210,11 @@
                     </div>
                     <div>
                         <div class="rectangle-sign"></div>
-                        <svg class="romb1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        <img src="svg/leder_sign.svg#sign">
+                        <!--<svg class="romb1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                              viewBox="0 0 400 400" height="400px" width="400px">
                             <use xlink:href="svg/leder_sign.svg#sign"></use>
-                        </svg>
+                        </svg>-->
                     </div>
                 </div>
             </div>
@@ -199,15 +223,17 @@
             <div class="category-name">
                 <div class="line"></div>
                 <div class="romb-figure">
-                    <svg class="romb1" fill=" #d9bf8f" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    <img src="svg/rhombus.svg" class="romb1">
+                    <!--<svg class="romb1" fill=" #d9bf8f" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                          width="20" height="20" viewBox="0 0 20 20">
                         <use xlink:href="svg/rhombus.svg#romb"></use>
-                    </svg>
+                    </svg>-->
                     <h2>Summer Collection</h2>
-                    <svg class="romb1" fill=" #d9bf8f" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    <img src="svg/rhombus.svg#romb" class="romb2">
+                    <!--<svg class="romb1" fill=" #d9bf8f" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                          width="20" height="20" viewBox="0 0 20 20">
                         <use xlink:href="svg/rhombus.svg#romb"></use>
-                    </svg>
+                    </svg>-->
                 </div>
                 <div class="line"></div>
             </div>
@@ -326,7 +352,7 @@
                         <use xlink:href="svg/rhombus.svg#romb"></use>
                     </svg>
                     <h2>Our brand</h2>
-                    <svg class="romb1" fill=" #d9bf8f" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    <svg class="romb2" fill=" #d9bf8f" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                          width="20" height="20" viewBox="0 0 20 20">
                         <use xlink:href="svg/rhombus.svg#romb"></use>
                     </svg>
@@ -367,7 +393,7 @@
                         <use xlink:href="svg/rhombus.svg#romb"></use>
                     </svg>
                     <h2>Customer says</h2>
-                    <svg class="romb1" fill=" #d9bf8f" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    <svg class="romb2" fill=" #d9bf8f" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                          width="20" height="20" viewBox="0 0 20 20">
                         <use xlink:href="svg/rhombus.svg#romb"></use>
                     </svg>
@@ -375,9 +401,7 @@
                 <div class="line"></div>
             </div>
             <div class="category-content">
-                <svg class="rect-yel" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="400" viewBox="0 0 1443 400">
-                    <use xlink:href="svg/rectangele-yellow.svg#rect-yel"></use>
-                </svg>
+                
                 <figure class="sandra">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="254px" height="315px" viewBox="0 0 254 315">
                         <use xlink:href="svg/sandra.svg#sandra"></use>
@@ -392,7 +416,7 @@
                         <br>voluptatem accusantium doloremque  <span class="Shaheer">Shaheer Sheikh</span><p>Designer</p></figcaption>
 
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="254" height="318" viewBox="0 0 254 318">
-                        <use xlink:href="svg/Sheikh.svg#sheikh"></use>
+                        <use href="svg/Sheikh.svg#sheikh"></use>
                     </svg>
 			<!--<img src="svg/sheikh.svg">-->
                 </figure>
@@ -423,7 +447,7 @@
                         <li>Terms & condition</li>
                         <li>Blog</li>
                     </ul>
-                    <ul>
+                    <ul class="menu-customer">
                         <li class="customer-service"><h2>CUSTOMER SERVICE</h2></li>
                         <li>Search Terms</li>
                         <li>Advanced Search</li>

@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    console.log('asd');
+    console.log('slick works');
     $('.slider').slick(
         {
             dots: true,

@@ -1,5 +1,4 @@
-var $but=$("button");
-//$("button").hide();
+var $but=$("main .bonus button");
 $but.click(function(e){
     $(window).scrollTop(0);
 });
