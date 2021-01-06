@@ -18,8 +18,23 @@ header .upper-panel {
      grid-template-columns: repeat(2,1fr);
      background: rgb(242,242,242);
      align-items: center;
+     position: relative;
 }
-header .upper-panel .phone figcaption{
+header .upper-panel::before {
+    content:'';
+    display: block;
+    height: 100%;
+    width: 100vw;
+    background-color:  rgb(242,242,242);
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    margin: auto;
+    left: -50vw;
+    right: -50vw;
+}
+    
+header .upper-panel .phone figcaption {
     top: 15px;
     left: 380px;
 }
@@ -68,20 +83,17 @@ header .bottom-panel {
     grid-template-columns: 1fr 2fr 0.5fr 0.4fr;
     align-items: center;
 }
-header .bottom-panel ul{
-    list-style: none;
-    padding: 0px;
-    grid-template-columns: repeat(4,1fr);
-}
+
 header .bottom-panel ul li{
     display: inline-grid;
     /* Style for "Home Galle" */
-    color: #000000;
+    color: black;
     font-family: "Playfair Display";
     font-size: 18px;
     font-style: italic;
     line-height: 17.69px;
     margin-right: 10px;
+    cursor: pointer;
 }
 header .bottom-panel .shopia {
     display: grid;
@@ -109,6 +121,7 @@ header .bottom-panel .social-bar figure {
     justify-content: end;
     align-items: center;
     margin: 0px;
+    cursor: pointer;
 }
 
 header .bottom-panel .social-bar figure span{
@@ -135,17 +148,48 @@ header .bottom-panel .social-bar figure span .fab{
 }
 header .bottom-panel .currency{
     display: grid;
-    justify-content: end;
+    justify-content: end;   
 }
-header .bottom-panel .currency .euro{
-    display: block;
+header .bottom-panel .currency .euro {
     background: black;
     color: white;
-    height: 36px;
-    width: 90px;
+    overflow: hidden;
+    height: 26px;
+    margin: 0px;
 }
-header .bottom-panel .currency .euro:{
-    
+header .bottom-panel .currency .euro figure {
+    display: grid; 
+    grid-template-columns: 54px 17px; 
+    grid-column-gap: 5px; 
+    justify-content: center; 
+    align-items: center; 
+    margin: 0px;
+}
+
+header #listCurr{
+    display: grid;
+    position: relative;
+    margin:0px;
+    width: 100px;
+    list-style: none;
+    padding: 0px;
+    height: 28px;
+}
+header #listCurr li {
+    width: 100%;
+    cursor: pointer;
+}
+
+
+header #euro figcaption{
+    color:white;
+    font-size: 1em;
+}
+header .bottom-panel .currency ul .usd,.bottom-panel .currency ul .btc{
+    display: none;
+}
+header .bottom-panel .currency ul .usd span,.bottom-panel .currency ul .btc span{
+    padding-left:10px;
 }
 main {
     max-width: 1290px;
@@ -304,11 +348,21 @@ main .bonus{
     margin-top: 66px;
 
 }
-main .bonus button {
+main .but_home {
     position: fixed;
     top:900px;
-    left: 1800px;
-    width: 50px;
+    left: 1610px;
+    width: 70px;
+    z-index: 10;
+}
+main .but_home figure {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+}
+main .but_home figure svg{
+    width: 20px;
+    height: 20px;
 }
 main .bonus .free .plane {
     position: absolute;
